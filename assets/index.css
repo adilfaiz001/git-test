@@ -152,6 +152,7 @@ body{
 
 
 
+
 ::-webkit-scrollbar{
   width: .1px;
 }
@@ -228,6 +229,7 @@ body{
 }
 .navbar-nav{
   float:left;
+  display: inline-flex;
 }
 
 .navbar-inverse .navbar-nav>.active>a,
@@ -250,9 +252,16 @@ body{
 
 
 
-/*Cover Page */
 
-/*Cover page Content */
+
+
+
+
+
+
+
+
+/*Cover Page */
 
 .cover-page{
   background-image:url('../img/cover2.jpg');
@@ -260,17 +269,18 @@ body{
   background-blend-mode: color;
   background-color: rgba(29, 29, 29, 0.37);
   height: 43em;
-  position: absolute;
+  position: absolute !important;
   width: 100%;
+  margin:0;
 }
 
 .cover-container{
-margin-left: 35em;
-margin-top: 13.5em;
+
 }
 .cover-name{
-  margin-left: 7em;
-
+  position: absolute;
+top: 28%;
+left: 37.3%;
 }
 .cover-name>h1
 {
@@ -282,16 +292,16 @@ margin-top: 13.5em;
 }
 .border-name{
   border-bottom: solid 3.5px rgb(255, 255, 255);
-  margin-right: 35em;
-  position: relative;
-  bottom: 2em;
+  position: absolute;
+  top: 57.6%;
+  left: 32.1%;
 }
 .cover-detail
 {
-    display: flex;
-    padding-right: 35em;
-    position: relative;
-    bottom: 2.9em;
+  display: flex;
+  position: absolute;
+  top: 56.1%;
+  left: 30.75%;
 }
 .cover-detail>h2
 {
@@ -306,12 +316,10 @@ margin-top: 13.5em;
 {
   margin-left: 5%;
 }
-.row{
-  margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    position: relative;
-    bottom: 3.9em;
+.social-class{
+  position: absolute;
+  top: 64.2%;
+  left: 38.5%;
 }
 .row-social{
   height: 50px;
@@ -408,10 +416,10 @@ margin-top: 13.5em;
 }
 
 .img-self{
-  position: relative;
-  bottom: 2.5em;
-  margin-left: 47em;
-  margin-top: 2em;
+  position: absolute;
+  top: 80.2%;
+  left: 42%;
+  padding: 0 13px 0 13px;
 }
 .img-self>img
 {
@@ -421,6 +429,20 @@ margin-top: 13.5em;
 
 }
    /*Cover page Content End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    /*Slide left Menu */
 .slide-left-menu
@@ -862,12 +884,14 @@ margin-top: 13.5em;
   left: 5em;
   padding-top: 6em;
 }
+/*
 .col-md-4
 {
   height: 20em;
   padding-left: 5em;
   width: 30%;
 }
+*/
 .lazy-load-box
 {
   opacity: 0;

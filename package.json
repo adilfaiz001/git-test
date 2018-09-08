@@ -1,0 +1,23 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "[![Mark](https://camo.githubusercontent.com/4d6b4c3b2a1d015b2ffe57bfc76657a57ca644a6/68747470733a2f2f696d672e736869656c64732e696f2f776562736974652d75702d646f776e2d677265656e2d7265642f68747470732f66616865656c2e636f6d2e7376673f6c6162656c3d57656273697465267374796c653d666f722d7468652d6261646765)](http://www.adil-faiz.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adilfaiz001/WS_WebPortal.git"
+  },
+  "author": "adil faiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adilfaiz001/WS_WebPortal/issues"
+  },
+  "homepage": "https://github.com/adilfaiz001/WS_WebPortal#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  }
+}

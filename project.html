@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/project.css" media="screen" title="no title" charset="utf-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v4.0.12.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse" id="navbar">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="resume.html">Overview</a></li>
+             <li class="active"><a href="project.html">Projects</a></li>
+             <li><a href="education.html">Education</a></li>
+             <li><a href="ask.html">Ask?</a></li>
+          </ul>
+       </div>
+      </nav>
+
+    <div class="page_content row">
+      <aside class="sidebar col-xs-12 col-md-3">
+          <div class="row">
+            <div class="col-xs-12 col-md-3 all-list">
+              <nav>
+                <ul>
+                  <li> <a href="#" id="all-projects-tab">All Projects</a></li>             <!--all project template -->
+                  <li> <a href="#">Featured Projects</a> </li>       <!--featured projects template -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-3 category">
+              <div class="header-1">
+                <h3>Category</h3>
+              </div>
+              <nav>
+                <ul>
+                  <li> <a href="#">Deeplearning</a> </li>
+                  <li> <a href="#">Machine Learning</a> </li>
+                  <li> <a href="#">Web Development</a> </li>
+                  <li> <a href="#">IoT</a> </li>
+
+                </ul>
+              </nav>
+
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-3 timeline">
+              <div class="header-2">
+                <h3>Timeline</h3>
+              </div>
+            <nav>
+              <ul>
+                <li> <a href="#">2018</a> </li>
+                <li> <a href="#">2017</a> </li>
+                <li> <a href="#">2016</a> </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </aside>
+
+
+
+      <div class="project-side col-xs-12 col-md-9" id="content">
+        </div>
+
+    </div>
+
+    <div class="footer">
+      </div>
+
+    <script id="all-projects-template" type="text/x-handlebars-template">
+      <div class="row">
+
+          {{#each all_projects}}
+          <div class="col-xs-12 col-md-6 all-prj" data-id={{@index}}>
+            <h2>{{name}}</h2>
+            <div class="project-thumbnail">
+              <img src="{{thumbnail}}" alt="">
+              <p>{{des}}</p>
+            </div>
+            <div class="detail">
+              <a href="{{url}}">Link</a>
+              <a href="{{git_url}}">GitHub</a>
+            </div>
+          </div>
+          {{/each}}
+
+      </div>
+    </script>
+
+
+    <script type="text/javascript" src="js/project_data.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
+  </body>
+</html>

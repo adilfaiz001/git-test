@@ -314,6 +314,12 @@ body{
     margin: 0 0px 0px;
     align-items: center;
 }
+@media screen and (max-width:767px) {
+  .detail
+  {
+    display: block;
+  }
+}
 .d
 {
   display: flex;
@@ -323,7 +329,7 @@ body{
 }
 .d1
 {
-
+  text-align: center;
 }
 .d2
 {

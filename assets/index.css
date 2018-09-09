@@ -280,32 +280,58 @@ body{
 .cover-name{
   top: 24px;
 }
-.cover-name>h1
+.cover-name h1
 {
-  left: 40%;
     font-size: 10em;
     font-weight: bolder;
     font-family: 'Amatic SC', cursive;
     color: rgb(251, 251, 251);
     margin-bottom: 32px;
-    position: relative;
+    text-align: center;
 }
 .border-name
 {
+  display: flex;
   bottom: 14px;
+  height: 3.5px;
+  justify-content: center;
 }
-.border{
-  border-bottom: solid 3.5px rgb(255, 255, 255);
-  left: 34%;
+.border
+{
+    height: 100%;
+    background-color:white;
 }
 .cover-detail
 {
+  display: flex;
+  justify-content: center;
   bottom: 18px;
 }
 .detail
 {
   display: flex;
-  left: 34%;
+    padding: 0 0px 0 0px;
+    margin: 0 0px 0px;
+    align-items: center;
+}
+.d
+{
+  display: flex;
+    justify-content: center;
+    padding: 0;
+
+}
+.d1
+{
+
+}
+.d2
+{
+
+}
+.d3
+{
+
 }
 .cover-detail h2
 {
@@ -313,13 +339,10 @@ body{
   font-weight: bolder;
   font-family: 'Poiret One', cursive;
   color: rgb(255, 255, 255);
-  margin-left: 55px;
   line-height:24pt;
 }
-.cover-detail h2:nth-child(1)
-{
-  margin-left: 5%;
-}
+
+
 
 .social-class{
   bottom: 18px;

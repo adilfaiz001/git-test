@@ -452,8 +452,6 @@ body{
 }
 .img-self>img
 {
-  position: relative;
-    left: 43%;
     height: 17em;
     border: solid 5px white;
     width: 228px;

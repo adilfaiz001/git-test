@@ -156,7 +156,8 @@ body{
 ::-webkit-scrollbar{
   width: .1px;
 }
-* {
+
+*{
     box-sizing: border-box;
 }
 .hbmenu {
@@ -247,6 +248,12 @@ body{
   font-size: 20px;
   font-family: 'Comfortaa', cursive;
   font-weight: bolder;
+}
+
+@media screen and (max-width:646px)
+{
+  
+
 }
 /*Navigation Bar Ends*/
 
@@ -645,6 +652,7 @@ body{
   {
     display: none;
   }
+
 }
 .burger, .filters, .game .status {
     -moz-user-select: -moz-none;
@@ -1039,19 +1047,24 @@ body{
   background-attachment: fixed;
   height: 620px;
 }
-.con-code{
-    position: relative;
-    width: 100%;
-    top: 36%;
+.slide1
+{
+  display: flex;
+  justify-content: center;
+}
+
+.con-code
+{
     text-align: center;
 }
-.con-code>p{
+.con-code>p
+{
   font-family: 'Bungee Shade', cursive;
-font-size: 7.5em;
-color: white;
-text-align: center;
-display: inline-block;
-opacity: 0;
+  font-size: 7.5em;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  opacity: 0;
 
 }
 .con-code>p:nth-child(1){
@@ -1161,6 +1174,7 @@ opacity: 0;
     -webkittransition-timing-function: cubic-bezier(0.65,0.1,0.1,0.65);
   }
 }
+
 .space-2
 {
   height: 20px;

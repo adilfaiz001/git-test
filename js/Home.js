@@ -1,22 +1,43 @@
+//==============loading function=====================//
+
 var start = new Date();
 var t = 0;
 $(window).load(function() {
    t = (new Date() - start);
 });
 
-console.log(t);
-$(document).ready(function() {
+$(document).ready(function()
+{
 
     setTimeout(function(){
         $('body').addClass('loaded');
-    },(t+1)*1000);
+    },(t+1)*500);
 
 });
 
+//====================================================//
 
 
 
-/*Navigation Bar scroll function */
+
+
+
+
+
+
+//====================Page utility function==============//
+
+window.onscroll = function()
+{
+    navbarScroll();
+    var speed = 2.5;
+    document.getElementById("check").style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/speed)+"px";
+};
+
+
+
+
+/*=====Navigation Bar scroll function =======*/
 function navbarScroll() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("navbar").style.transform="translateY(0)";
@@ -26,32 +47,12 @@ function navbarScroll() {
         document.getElementById("navbar").style.transition="transform 0.4s";
     }
 }
-/*Navigation Bar function Ends*/
-
-
-//NOte: Sequence of function here in js should be in order of their function in page,they work according to their sequence as in programming.
+/*===========================================*/
 
 
 
-//---------------Left Slide Card----------------------
 
-//----------Cross sign Animation----------------
-//Hover Over Element Bug
-//Hover over burger causing st-1 and st-2 unstable
-//need to isolate hover class for burger st-1 and st-2
-
-/*document.querySelector(".burger").onmouseover=function()
-{
-  document.querySelector(".burger").classList.add("hover");
-};
-
-document.querySelector(".burger").onmouseout=function()
-{
-  document.querySelector(".burger").classList.remove("hover");
-};
-*/
-
-
+/*========Slide left card====================*/
 function p()
 {
   document.getElementById('slide-left-menu').style.transform="translateX(-4em)";
@@ -101,40 +102,34 @@ document.querySelector(".burger").onmouseover=function()
 function del(){
   document.getElementById("Burger").classList.remove("st-1");
 }
-//-----------Cross Animation Ends-----------------
+
+/*=============================================*/
+
+//===================================================================//
 
 
 
 
 
 
-//----------------Left Slide Card Ends-----------------------
-
-
-/*Slide2 Content */
 
 
 
-/*
-var header2 = document.getElementById("Header2");
-var header1 = document.getElementById("Header1");
-var domRect = header2.getBoundingClientRect();
-var domRect1 = header1.getBoundingClientRect();
-
-function parallax() {
-    var speed = 2.0;
-    var t = domRect.top;
-    var t1 = domRect1.top;
-    console.log(t1);
-    if(t1<113)
-    {
-      header1.style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/5.0)+"px"
-    }
-    header2.style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/2.0)+"px";
-
-  }*/
 
 
+
+
+
+
+
+
+
+
+
+//======================Page Content utility==========================//
+
+
+/*===============Parallax Background===================*/
 function isInViewport(node) {
     var rect = node.getBoundingClientRect()
     return (
@@ -146,31 +141,56 @@ function isInViewport(node) {
     )
   }
 
-$(window).scroll(function() {
-  var scrolled = $(window).scrollTop()
-  $('.parallax').each(function(index, element) {
-    var initY = $(this).offset().top
-    var height = $(this).height()
-    var endY  = initY + $(this).height()
-
-    // Check if the element is in the viewport.
-    var visible = isInViewport(this)
-    if(visible) {
-      var diff = scrolled - initY
-      var ratio = Math.round((diff / height) * 100)
-      $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
-    }
-  })
-})
-
-
-//optimize scroll content with element position for different devices
   $(window).scroll(function() {
-     var hT = $('#Header1').offset().top,
-         hH = $('#Header1').outerHeight(),
-         wH = $(window).height(),
+    var scrolled = $(window).scrollTop()
+    $('.parallax').each(function(index, element) {
+      var initY = $(this).offset().top
+      var height = $(this).height()
+      var endY  = initY + $(this).height()
+
+      // Check if the element is in the viewport.
+      var visible = isInViewport(this)
+      if(visible) {
+        var diff = scrolled - initY
+        var ratio = Math.round((diff / height) * 100)
+        $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
+      }
+    });
+  });
+/*=======================================================*/
+
+
+
+
+/*=================Scroll Animation======================*/
+
+  $(window).scroll(function()
+  {
+
+    /*
+     var el = function(element)
+     {
+       var hT = element.offsetTop;
+       var hH = element.outerHeight();
+        return{
+          hT:hT,
+          hH:hH
+        };
+     }
+     var e = $('#Header1');
+     var e_pos = el(e);
+     console.log(e_pos.hT,e_pos.hH);
+     */
+
+
+     var wH = $(window).height(),
          wS = $(this).scrollTop();
-     if ((wS+120) > (hT+hH-wH))
+
+     var hT = $('#Header1').offset().top,
+         hH = $('#Header1').outerHeight();
+
+
+     if ((wS+210) > (hT+hH-wH))
      {
        $(".cc1").addClass('con-code-slide');
      }
@@ -178,29 +198,35 @@ $(window).scroll(function() {
      var hT2 = $('#Header2').offset().top,
          hH2 = $('#Header2').outerHeight();
 
-    if ((wS+350) > (hT2+hH2-wH))
-    {
-      $('.progress').addClass('slide-up');
-    }
-
-    if(wS>2410)
+    if(wS+300>hT2+hH2-wH)
     {
       $('#pk-h1').addClass('pk-slide-rightin');
     }
 
-    if(wS>2508){
+    if ((wS+200) > (hT2+hH2-wH))
+    {
+      $('.progress').addClass('slide-up');
+    }
+
+    if(wS+180>hT2+hH2-wH){
       $('.py').addClass('python');
       $('.jv').addClass('java');
       $('.cp').addClass('cpp');
       $('.c').addClass('cc');
     }
 
-    if(wS>3070)
+    var hT3 = $('#Header3').offset().top,
+        hH3 = $('#Header3').outerHeight();
+
+    if(wS+100>hT3+hH3-wH)
     {
       $('.con-code2').addClass('cc2-animate');
     }
 
-    if(wS>3670)
+    var hT4 = $('#Header4').offset().top,
+        hH4 = $('#Header4').outerHeight();
+
+    if(wS+150>hT4+hH4-wH)
     {
       $('#web-h1').addClass('web-slide-rightin');
       $('#web-h2').addClass('web-slide-rightin2');
@@ -233,8 +259,9 @@ $(window).scroll(function() {
     //var x = parseInt($('.skills-wrapper').css('transform').split(',')[4]);
 
   });
+/*=======================================================*/
 
-/*--------------footer-------*/
+//=====================================================================//
 
 
 
@@ -520,15 +547,3 @@ $('#Msg').on('keyup',function(event)
   }
 
 });
-
-
-
-
-/*Event triggers */
-
-window.onscroll = function()
-{
-    navbarScroll();
-    var speed = 2.5;
-    document.getElementById("check").style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/speed)+"px";
-};

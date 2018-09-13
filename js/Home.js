@@ -228,10 +228,14 @@ function isInViewport(node) {
 
     if(wS+150>hT4+hH4-wH)
     {
-      $('#web-h1').addClass('web-slide-rightin');
-      $('#web-h2').addClass('web-slide-rightin2');
+      $('#web-h1').removeClass('web-h');
+      $('#web-h1').addClass('slide-right-in');
 
-      $('.skills-wrapper').addClass('skills-slide-rightin');
+      $('#web-h2').removeClass('web-h');
+      $('#web-h2').addClass('slide-right-in');
+
+      $('.skills-wrapper').removeClass('shills-h');
+      $('.skills-wrapper').addClass('slide-right-in');
 
       var i ;
       for(i = 1;i<=7;i=i+1)
@@ -245,7 +249,7 @@ function isInViewport(node) {
       }
     }
 
-    
+
 
 
 

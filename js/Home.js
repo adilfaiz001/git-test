@@ -232,8 +232,9 @@ function isInViewport(node) {
       $('#web-h2').addClass('web-slide-rightin2');
 
       $('.skills-wrapper').addClass('skills-slide-rightin');
+
       var i ;
-      for(i = 1;i<=8;i=i+1)
+      for(i = 1;i<=7;i=i+1)
       {
         $('.f-'+String(i)).addClass('fill'+String(i));
       }
@@ -243,6 +244,10 @@ function isInViewport(node) {
         $('.f2-'+String(j)).addClass('fill2-'+String(j));
       }
     }
+
+    
+
+
 
       if(wS>4335)
       {

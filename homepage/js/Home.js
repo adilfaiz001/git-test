@@ -234,7 +234,7 @@ function isInViewport(node) {
       $('#web-h2').removeClass('web-h');
       $('#web-h2').addClass('slide-right-in');
 
-      $('.skills-wrapper').removeClass('shills-h');
+      $('.skills-wrapper').removeClass('skills-h');
       $('.skills-wrapper').addClass('slide-right-in');
 
       var i ;

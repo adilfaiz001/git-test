@@ -5,7 +5,7 @@ const vhost = require('vhost');
 
 
 const master = express();
-const homepage = espress();
+const homepage = express();
 
 
 
@@ -34,4 +34,11 @@ master.listen(3000,()=>{
 //---------------------------Homepage-------------------------------------//
 homepage.get('/',(req,res)=>{
   res.sendFile(path.resolve(__dirname, 'homepage', 'index.html'));
-})
+});
+
+
+
+
+
+
+master.use(vhost('homepage',homepage));

@@ -271,7 +271,7 @@ body{
 /*Cover Page */
 
 .cover-page{
-  background-image:url('../img/cover2.jpg');
+  background-image:url('../assets/cover2.jpg');
   background-size: cover;
   background-blend-mode: color;
   background-color: rgba(29, 29, 29, 0.37);
@@ -1049,7 +1049,7 @@ body{
 }
 
 #Header1{
-  background-image: url("../img/pg.jpg");
+  background-image: url("../assets/pg.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 640px;
@@ -1345,7 +1345,7 @@ body{
 }
 .python{
   background-color: #3376b7;
-  background-image: url('../img/py.png');
+  background-image: url('../assets/py.png');
   background-repeat: no-repeat;
   background-position: center;
   animation: pyc 1s forwards;
@@ -1416,7 +1416,7 @@ body{
 }
 .java{
   background-color: #3e493a;
-  background-image: url('../img/jv.png');
+  background-image: url('../assets/jv.png');
   background-repeat: no-repeat;
   background-position: center;
   animation: javac 1s forwards;
@@ -1486,7 +1486,7 @@ body{
 }
 .cpp{
   background-color: #1ab4ba;
-  background-image: url('../img/cpp.png');
+  background-image: url('../assets/cpp.png');
   background-repeat: no-repeat;
   background-position: center;
   animation: cppc 0.5s forwards;
@@ -1556,7 +1556,7 @@ body{
 }
 .cc{
   background-color:rgb(210, 70, 70) ;
-  background-image: url('../img/c.png');
+  background-image: url('../assets/c.png');
   background-repeat: no-repeat;
   background-position: center;
   animation: ccc 0.5s forwards;
@@ -1717,7 +1717,7 @@ animation: prog_up 1s forwards;
 
 #Header3{
   height: 640px;
-  background-image: url('../img/pg21.jpg');
+  background-image: url('../assets/pg21.jpg');
   background-blend-mode: color;
   background-color: rgba(29, 29, 29, 0.52);
   background-attachment: fixed;
